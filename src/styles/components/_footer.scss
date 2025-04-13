@@ -1,0 +1,11 @@
+@use "../base/settings" as s;
+@use "../utilities/mixins" as m;
+@use "sass:color";
+
+footer {
+  padding: s.$section-padding;
+  border-top: 1px dotted color.adjust(s.$grey, $lightness: -20%);
+  p {
+    @include m.flatten;
+  }
+}

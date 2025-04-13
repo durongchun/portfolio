@@ -1,0 +1,19 @@
+// ✅ Place all @use at the top to load Sass files
+
+@use "./utilities/functions";
+@use "./base/settings"; // Ensure that all settings like colors, fonts, etc., are defined here.
+@use "./utilities/mixins" as *; // Import mixins globally for use in your components
+@use "./utilities/utility-classes";
+@use "./base/reset"; // Reset styles to start from a clean slate
+@use "./base/type"; // Set up typography
+@use "./components/body";
+@use "./components/wrapper";
+@use "./components/header";
+@use "./components/nav";
+@use "./components/main";
+@use "./components/footer";
+@use "./components/loading-spinner";
+
+// ✅ External styles (like Google Fonts) should remain as @import
+
+@import url("https://fonts.googleapis.com/css?family=Alatsi|Roboto:400,400i,700,700i&display=swap");

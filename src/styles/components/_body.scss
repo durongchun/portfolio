@@ -1,0 +1,5 @@
+@use "../base/settings" as s;
+
+body {
+  background-color: s.$dark;
+}

@@ -1,0 +1,6 @@
+@use "../base/settings" as s;
+@use "../utilities/mixins" as m;
+
+main {
+  padding: s.$section-padding;
+}
