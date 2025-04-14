@@ -3,4 +3,11 @@
 
 main {
   padding: s.$section-padding;
+  .name {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

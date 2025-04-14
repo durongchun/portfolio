@@ -2,20 +2,4 @@
 @use "../utilities/mixins" as m;
 
 header {
-  background-color: s.$yellow;
-  padding: s.$section-padding;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 84px;
-  h1 {
-    @include m.flatten;
-  }
-  .user {
-    text-align: right;
-  }
-
-  p {
-    margin-bottom: 8px;
-  }
 }

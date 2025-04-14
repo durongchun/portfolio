@@ -2,11 +2,7 @@
 @use "../utilities/mixins" as m;
 
 .wrapper {
-  max-width: 700px;
-  background-color: s.$light; // Correctly using the settings namespace
-  @include m.mc(
-    true,
-    10px,
-    20px
-  ); // Correctly calling the mixin with the namespace
+  // max-width: 700px;
+  background-color: s.$dark; // Correctly using the settings namespace
+  @include m.mc(true, 4rem, 10px);
 }
