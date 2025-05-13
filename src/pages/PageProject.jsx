@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import peakmotion from "../images/peakmotion.gif";
 import peakmotionadmin from "../images/peakmotion-admin.gif";
-import SlidePanel from "../components/SlidePanel"; // Import the new component
+import SlidePanel from "../components/SlidePanel";
+import PeakmotionProject from "../components/ProjectDetails/PeakmotionProject";
 
 function PageProject() {
   const [openPanel, setOpenPanel] = useState(null); // "peakmotion" or "admin"
@@ -12,6 +13,7 @@ function PageProject() {
 
   const closePanel = () => {
     setOpenPanel(null);
+    12;
   };
 
   return (
@@ -42,9 +44,7 @@ function PageProject() {
       </main>
 
       <SlidePanel isOpen={!!openPanel} onClose={closePanel}>
-        {openPanel === "peakmotion" && (
-          <p>Details about the Peakmotion eCommerce website...</p>
-        )}
+        {openPanel === "peakmotion" && <PeakmotionProject />}
         {openPanel === "admin" && (
           <p>Details about the Peakmotion Admin Panel...</p>
         )}
