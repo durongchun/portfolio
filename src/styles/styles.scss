@@ -13,6 +13,8 @@
 @use "./components/main";
 @use "./components/footer";
 @use "./components/loading-spinner";
+@use "./components/slide-panel";
+@use "./components/custom-cursor";
 
 // ✅ External styles (like Google Fonts) should remain as @import
 

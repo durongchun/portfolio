@@ -1,16 +1,19 @@
 // Page Home
 
-import { useEffect, useState } from "react";
-import { appTitle } from "../globals/globalVariables";
+import CanvasBackground from "../components/CanvasBackground";
 
 function PageHome() {
   return (
-    <main>
-      <div className="name">
-        <p>Lucy Du</p>
-        <p>Software Developer</p>
-      </div>
-    </main>
+    <>
+      <main>
+        <div className="name">
+          <p>Lucy Du</p>
+          <p>Software Developer</p>
+        </div>
+        <CanvasBackground />
+        <div></div>
+      </main>
+    </>
   );
 }
 

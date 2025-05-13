@@ -1,0 +1,27 @@
+@use "../base/settings" as s;
+@use "../utilities/mixins" as m;
+@use "sass:color";
+
+.custom-cursor {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  border: 0.5px solid s.$light;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.1s ease-out;
+}
+.custom-cursor::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: s.$light;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}

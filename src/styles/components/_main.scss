@@ -10,4 +10,14 @@ main {
     justify-content: center;
     align-items: center;
   }
+  .peakmotion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+    color: s.$light;
+    font-size: smaller;
+  }
 }
