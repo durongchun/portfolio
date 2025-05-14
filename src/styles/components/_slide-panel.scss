@@ -25,13 +25,13 @@
 
 .underline {
   width: 100%;
-  height: 1px;
-  background-color: s.$grey;
+  height: 0.5px;
+  background-color: s.$darkgrey;
   margin-top: 1rem;
 }
 
 .back-button {
-  color: s.$grey;
+  color: s.$darkgrey;
 }
 
 .close-button {
@@ -41,7 +41,7 @@
   width: 30px;
   height: 30px;
   background: transparent;
-  border: 2px solid s.$grey;
+  border: 2px solid color(a98-rgb 0.82 0.81 0.81);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -74,4 +74,47 @@
 
 .clickable:hover {
   transform: scale(1.03);
+}
+
+.project-summary {
+  padding-top: 2.5rem;
+}
+
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: auto;
+}
+
+ul {
+  list-style-type: none; /* Removes default bullets */
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(0, max-content)
+  ); /* Columns adjust to content width */
+  gap: 0.8rem; /* Space between items */
+  justify-content: start; /* Align items to the start */
+}
+
+li {
+  background: s.$blue;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: visible; /* Make sure content shows */
+  text-overflow: unset; /* Prevent clipping or ellipsis */
+}
+
+.project-links > a {
+  color: s.$darkgrey;
+  font-weight: 900;
+  font-family: "Blorado, sans-serif";
+  font-size: 14px;
+  text-decoration: none;
 }

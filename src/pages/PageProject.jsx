@@ -22,7 +22,6 @@ function PageProject() {
         <div className="project">
           <div className="peakmotion">
             <div>
-              <h2>Peakmotion</h2>
               <img
                 src={peakmotion}
                 alt="peakmotion ecommerce website"
@@ -31,7 +30,6 @@ function PageProject() {
               />
             </div>
             <div>
-              <h2>Peakmotion Admin</h2>
               <img
                 src={peakmotionadmin}
                 alt="peakmotion ecommerce website admin panel"
