@@ -1,5 +1,5 @@
 import React from "react";
-import peakmotion from "../../images/peakmotionincludeadmin.gif";
+import peakmotion from "../../images/peakmotion.gif";
 
 function PeakmotionProject() {
   return (

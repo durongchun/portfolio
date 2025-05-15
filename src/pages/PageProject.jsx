@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import peakmotion from "../images/peakmotion.gif";
+import peakmotion from "../images/peakmotion-small.gif";
 import movie from "../images/movie-small.gif";
 import SlidePanel from "../components/SlidePanel";
 import PeakmotionProject from "../components/ProjectDetail/PeakmotionProject";
 import MovieProject from "../components/ProjectDetail/MovieProject";
 
 function PageProject() {
-  const [openPanel, setOpenPanel] = useState(null); // "peakmotion" or "admin"
+  const [openPanel, setOpenPanel] = useState(null);
 
   const handleImageClick = (panelName) => {
     setOpenPanel(panelName);
