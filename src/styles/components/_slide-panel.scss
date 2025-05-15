@@ -10,9 +10,9 @@
   background: s.$dark;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease;
-  z-index: 1000;
   padding: 1rem;
   z-index: 1000;
+  overflow-y: auto;
 }
 
 .slide-panel.open {
@@ -28,6 +28,25 @@
   height: 0.5px;
   background-color: s.$darkgrey;
   margin-top: 1rem;
+}
+
+.open-project {
+  text-align: center;
+  font-family: "Blorado, sans-serif";
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: s.$yellow;
+  margin-top: 3rem;
+  & a {
+    background: none;
+    border: none;
+    color: s.$darkgrey;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 900;
+  }
 }
 
 .back-button {
@@ -52,7 +71,7 @@
 }
 
 .close-button:hover {
-  background: #f0f0f0;
+  background: s.$yellow;
 }
 
 .close-button svg {
@@ -70,10 +89,11 @@
 .clickable {
   cursor: pointer;
   transition: transform 0.2s ease;
+  border-radius: 5px;
 }
 
 .clickable:hover {
-  transform: scale(1.03);
+  transform: scale(1.5);
 }
 
 .project-summary {

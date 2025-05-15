@@ -5,7 +5,7 @@ function PeakmotionProject() {
   return (
     <>
       <div className="project-summary">
-        <h3>PeakMotion</h3>
+        <h4>PeakMotion</h4>
         <p>
           The website allows users to browse products, add them to their cart,
           and complete purchases securely. The admin panel enables easy
@@ -19,7 +19,7 @@ function PeakmotionProject() {
       </div>
 
       <div className="project-about">
-        <h3>About</h3>
+        <h4>About</h4>
         <p>
           Peakmotion is an e-commerce website that I developed using ASP.NET,
           MVC Pattern, and the Identity framework. It features a user-friendly
@@ -27,7 +27,7 @@ function PeakmotionProject() {
         </p>
       </div>
       <div className="project-technologies">
-        <h3>Technologies</h3>
+        <h4>Technologies</h4>
         <ul>
           <li>C#</li>
           <li>MVC</li>
@@ -37,12 +37,12 @@ function PeakmotionProject() {
           <li>HTML5</li>
         </ul>
       </div>
-      {/* <div className="project-website">
-        <h3>Website</h3>
+      <div className="project-website">
+        <h4>Website</h4>
         <a href=""></a>
-      </div> */}
+      </div>
       <div className="project-links">
-        <h3>Github</h3>
+        <h4>Github</h4>
         <a href="https://github.com/durongchun/peakmotion">
           https://github.com/durongchun/peakmotion
         </a>
