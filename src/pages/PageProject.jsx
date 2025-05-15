@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import peakmotion from "../images/peakmotion.gif";
-import peakmotionadmin from "../images/peakmotion-admin.gif";
+import movie from "../images/movie-small.gif";
 import SlidePanel from "../components/SlidePanel";
 import PeakmotionProject from "../components/ProjectDetails/PeakmotionProject";
+import MovieProject from "../components/ProjectDetails/MovieProject";
 
 function PageProject() {
   const [openPanel, setOpenPanel] = useState(null); // "peakmotion" or "admin"
@@ -13,7 +14,6 @@ function PageProject() {
 
   const closePanel = () => {
     setOpenPanel(null);
-    12;
   };
 
   return (
@@ -31,9 +31,9 @@ function PageProject() {
             </div>
             <div>
               <img
-                src={peakmotionadmin}
-                alt="peakmotion ecommerce website admin panel"
-                onClick={() => handleImageClick("admin")}
+                src={movie}
+                alt="movie website"
+                onClick={() => handleImageClick("movie")}
                 className="clickable"
               />
             </div>
@@ -43,9 +43,7 @@ function PageProject() {
 
       <SlidePanel isOpen={!!openPanel} onClose={closePanel}>
         {openPanel === "peakmotion" && <PeakmotionProject />}
-        {openPanel === "admin" && (
-          <p>Details about the Peakmotion Admin Panel...</p>
-        )}
+        {openPanel === "movie" && <MovieProject />}
       </SlidePanel>
     </>
   );
