@@ -8,6 +8,8 @@ import PageHome from "../pages/PageHome";
 import PageProject from "../pages/PageProject";
 import PageAbout from "../pages/PageAbout";
 import PageContact from "../pages/PageContact";
+import PageResume from "../pages/PageResume";
+import PageEmail from "../pages/PageEmail";
 import PageNotFound from "../pages/PageNotFound";
 import { appTitle, appAuthor } from "../globals/globalVariables";
 import CustomCursor from "../components/CustomCursor";
@@ -23,6 +25,8 @@ function AppRouter() {
           <Route path="/projects" element={<PageProject />} />
           <Route path="/about" element={<PageAbout />} />
           <Route path="/contact" element={<PageContact />} />
+          <Route path="/resume" element={<PageResume />} />
+          <Route path="/email" element={<PageEmail />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         {/* <Footer author={appAuthor} /> */}

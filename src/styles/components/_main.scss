@@ -25,4 +25,62 @@ main {
     color: s.$light;
     font-size: smaller;
   }
+  .about {
+    display: flex;
+    flex-direction: column;
+    margin-left: 21%;
+    margin-right: 21%;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    .form-control {
+      display: block;
+      width: 100%;
+      height: calc(1.5em + 0.75rem + 2px);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #171616;
+      background-clip: padding-box;
+      border: 1px solid #060606;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    input,
+    textarea,
+    button {
+      width: 500px;
+      margin-top: 1rem;
+    }
+    textarea {
+      min-height: 200px;
+    }
+    button {
+      background-color: s.$yellow;
+      color: s.$dark;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(s.$yellow, 10%);
+      }
+    }
+  }
 }
