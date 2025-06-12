@@ -25,7 +25,7 @@ function AppRouter() {
           <Route path="/contact" element={<PageContact />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-        <Footer author={appAuthor} />
+        {/* <Footer author={appAuthor} /> */}
       </div>
     </BrowserRouter>
   );

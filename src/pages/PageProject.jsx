@@ -19,8 +19,26 @@ function PageProject() {
   return (
     <>
       <main>
-        <div className="project">
-          <div className="peakmotion">
+        <div className="projects-container">
+          <div className="projects">
+            <div>
+              <img
+                src={peakmotion}
+                alt="peakmotion ecommerce website"
+                onClick={() => handleImageClick("peakmotion")}
+                className="clickable"
+              />
+            </div>
+            <div>
+              <img
+                src={movie}
+                alt="movie website"
+                onClick={() => handleImageClick("movie")}
+                className="clickable"
+              />
+            </div>
+          </div>
+          <div className="projects">
             <div>
               <img
                 src={peakmotion}
