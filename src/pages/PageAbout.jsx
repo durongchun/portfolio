@@ -10,9 +10,9 @@ function PageAbout() {
 
   return (
     <main>
-      <section className="about">
+      <section className="about timeline">
         <h2>About Me.</h2>
-        <div>
+        <div className="timeline-item">
           <p> Heymate - BCIT Industry Client Project</p>
           <p>
             Led a team of 3 students through the full SDLC—from requirement
@@ -39,7 +39,7 @@ function PageAbout() {
             code reviews, merges.
           </p>
         </div>
-        <div>
+        <div className="timeline-item">
           <p>Foggix - Real-time Elevator Monitoring Platform</p>
           <p>
             . Contributed to the development of a real-time elevator monitoring
@@ -54,7 +54,7 @@ function PageAbout() {
             maintenance efficiency by 30%.
           </p>
         </div>
-        <div>
+        <div className="timeline-item">
           <p>Holinova - System Integration and Automation Testing</p>
           <p>
             . Worked on system integration for a large-scale software project,

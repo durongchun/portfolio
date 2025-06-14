@@ -25,7 +25,7 @@ main {
     color: s.$light;
     font-size: smaller;
   }
-  .about {
+  .timeline.about {
     display: flex;
     flex-direction: column;
     margin-left: 21%;
@@ -116,5 +116,41 @@ main {
         background-color: darken(s.$yellow, 20%);
       }
     }
+  }
+
+  .timeline {
+    position: relative;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    border-left: 3px solid #facc15; // yellow
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -1.4rem;
+    top: 0.3rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #facc15; // yellow
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  .timeline-item h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: #1f2937; // gray-800
+  }
+
+  .timeline-item ul {
+    margin: 0;
+    padding-left: 1rem;
+    list-style-type: disc;
   }
 }
