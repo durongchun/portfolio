@@ -16,12 +16,26 @@ function PageResume() {
 
   return (
     <main>
-      <button
-        onClick={handleDownload}
-        className="download-button" // Add your styles
-      >
-        Download Resume
-      </button>
+      <div className="resume">
+        <div>
+          <h1>Full Stack Developer</h1>
+          <p>
+            I’m Lucy, a Full Stack Web Developer with expertise in the MERN
+            stack (MongoDB, Express, React, Node.js). I am proficient in C#,
+            HTML, CSS, JavaScript, SQL, and frameworks like .NET Core, React,
+            Angular, and Node.js. Experienced with databases such as MongoDB,
+            MySQL, and DynamoDB, and cloud services like AWS and Firebase. I’m
+            passionate about building scalable solutions and continuously
+            enhancing my skills.
+          </p>
+        </div>
+        <button
+          onClick={handleDownload}
+          className="download-button" // Add your styles
+        >
+          Download Resume
+        </button>
+      </div>
     </main>
   );
 }

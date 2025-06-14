@@ -79,7 +79,41 @@ main {
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: darken(s.$yellow, 10%);
+        background-color: darken(s.$yellow, 20%);
+      }
+    }
+  }
+
+  .resume {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
+    a {
+      color: s.$yellow;
+      text-decoration: none;
+      font-size: 1.2rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .download-button {
+      background-color: s.$yellow;
+      color: s.$dark;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(s.$yellow, 20%);
       }
     }
   }
