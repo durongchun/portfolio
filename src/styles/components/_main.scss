@@ -82,6 +82,9 @@ main {
         background-color: darken(s.$yellow, 20%);
       }
     }
+    .email {
+      color: s.$light;
+    }
   }
 
   .resume {
@@ -142,15 +145,21 @@ main {
     border: 2px solid white;
   }
 
-  .timeline-item h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1.2rem;
-    color: #1f2937; // gray-800
-  }
+  .see-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: s.$light; // Tailwind blue-600
+    text-decoration: none;
+    font-weight: 500;
 
-  .timeline-item ul {
-    margin: 0;
-    padding-left: 1rem;
-    list-style-type: disc;
+    svg {
+      transition: transform 0.2s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(4px);
+    }
   }
 }

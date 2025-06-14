@@ -33,7 +33,9 @@ function PageEmail() {
         <h2>Contact.</h2>
         <p>
           Get in touch or shoot me an email directly at{" "}
-          <a href="mailto:durongchun@hotmail.com">durongchun@hotmail.com</a>
+          <a href="mailto:durongchun@hotmail.com" className="email">
+            durongchun@hotmail.com
+          </a>
         </p>
         <form onSubmit={sendEmail}>
           <div>
