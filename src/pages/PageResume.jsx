@@ -1,23 +1,27 @@
 // Page Not Found
 
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { appTitle } from "../globals/globalVariables";
-
 function PageResume() {
-  useEffect(() => {
-    document.title = `${appTitle} - Page Not Found`;
-  }, []);
+  const handleDownload = () => {
+    // Using the public URL
+    const fileUrl = `${import.meta.env.PUBLIC_URL || ""}/Lucy_Resume.pdf`;
+
+    // Create invisible anchor element
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = "Lucy_Resume.pdf"; // Custom filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <main>
-      <section>
-        <h2>404 ... : (</h2>
-        <p>Page not found.</p>
-        <p>
-          Go to <Link to="/">Home</Link> page.
-        </p>
-      </section>
+      <button
+        onClick={handleDownload}
+        className="download-button" // Add your styles
+      >
+        Download Resume
+      </button>
     </main>
   );
 }
