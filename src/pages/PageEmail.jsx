@@ -1,56 +1,69 @@
-// Page Not Found
-
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { appTitle } from "../globals/globalVariables";
+import emailjs from "emailjs-com";
 
 function PageEmail() {
   useEffect(() => {
     document.title = `${appTitle} - Page Not Found`;
   }, []);
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_9qh6mb9",
+        "template_qbuu0ea",
+        e.target,
+        "BkixjSpZH3z8-od7x"
+      )
+      .then(
+        () => {
+          alert("Message sent!");
+        },
+        () => {
+          alert("Failed to send message.");
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <main>
       <section className="contact">
         <h2>Contact.</h2>
         <p>
-          Get in touch or shoot me an email directly on durongchun@hotmail.com
+          Get in touch or shoot me an email directly at{" "}
+          <a href="mailto:durongchun@hotmail.com">durongchun@hotmail.com</a>
         </p>
-        <form action="">
+        <form onSubmit={sendEmail}>
           <div>
             <input
               type="text"
               name="name"
-              id="name"
-              class="form-control"
+              className="form-control"
               placeholder="Name"
-              aria-required="true"
-              required=""
+              required
             />
           </div>
           <div>
             <input
               type="email"
               name="email"
-              id="email"
-              class="form-control"
+              className="form-control"
               placeholder="Email"
-              aria-required="true"
-              required=""
+              required
             />
           </div>
           <div>
             <textarea
               name="message"
-              id="message"
               rows="5"
-              class="form-control"
+              className="form-control"
               placeholder="Message"
-              aria-required="true"
-              required=""
+              required
             ></textarea>
           </div>
-          <button type="submit">Send</button>
+          <button type="submit">Send Message</button>
         </form>
       </section>
     </main>
