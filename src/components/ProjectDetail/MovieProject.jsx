@@ -7,9 +7,8 @@ function MovieProject() {
       <div className="project-summary">
         <h4>Movie</h4>
         <p>
-          The website allows users to browse products, add them to their cart,
-          and complete purchases securely. The admin panel enables easy
-          management of products, orders, and user accounts.
+          Movie is a full-stack website that allows users to filter movies and
+          manage their favorite movies or watch later lists.
         </p>
         <img src={movie} alt="movie website" className="clickable" />
       </div>
@@ -17,9 +16,13 @@ function MovieProject() {
       <div className="project-about">
         <h4>About</h4>
         <p>
-          Peakmotion is an e-commerce website that I developed using ASP.NET,
-          MVC Pattern, and the Identity framework. It features a user-friendly
-          interface, secure authentication, and a seamless shopping experience.
+          Movie is a full-stack website that provides a platform for users to
+          filter movies, and add, remove favorite movies or watch later. It
+          features a user-friendly interface with a responsive design, ensuring
+          a seamless experience across devices. The website is built using React
+          for the frontend and Node.js for the backend, with DynamoDB as the
+          database solution.
+          <br />
         </p>
       </div>
       <div className="project-technologies">

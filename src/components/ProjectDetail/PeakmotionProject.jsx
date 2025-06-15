@@ -35,6 +35,7 @@ function PeakmotionProject() {
           <li>JavaScript (ES6+)</li>
           <li>Bootstrap & CSS3</li>
           <li>HTML5</li>
+          <li>PostgreSQL</li>
         </ul>
       </div>
       <div className="project-website">
