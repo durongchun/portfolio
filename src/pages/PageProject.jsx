@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import peakmotion from "../images/peakmotion-small.gif";
 import movie from "../images/movie-small.gif";
+import aivideogenerator from "../images/aivideogenerator-small.gif";
+import postdashboard from "../images/postdashboard-small.gif";
+import news from "../images/news-small.gif";
 import SlidePanel from "../components/SlidePanel";
 import PeakmotionProject from "../components/ProjectDetail/PeakmotionProject";
 import MovieProject from "../components/ProjectDetail/MovieProject";
+import AiVideoGeneratorProject from "../components/ProjectDetail/AiVideoGeneratorProject";
+import PostDashboardProject from "../components/ProjectDetail/PostDashboardProject";
+import NewsProject from "../components/ProjectDetail/NewsProject";
 
 function PageProject() {
   const [openPanel, setOpenPanel] = useState(null);
@@ -41,17 +47,35 @@ function PageProject() {
           <div className="projects">
             <div>
               <img
-                src={peakmotion}
-                alt="peakmotion ecommerce website"
-                onClick={() => handleImageClick("peakmotion")}
+                src={news}
+                alt="news"
+                onClick={() => handleImageClick("news")}
                 className="clickable"
               />
             </div>
             <div>
               <img
-                src={movie}
-                alt="movie website"
-                onClick={() => handleImageClick("movie")}
+                src={postdashboard}
+                alt="postdashboard"
+                onClick={() => handleImageClick("postdashboard")}
+                className="clickable"
+              />
+            </div>
+          </div>
+          <div className="projects">
+            <div>
+              <img
+                src={aivideogenerator}
+                alt="ai video generator"
+                onClick={() => handleImageClick("aivideogenerator")}
+                className="clickable"
+              />
+            </div>
+            <div>
+              <img
+                src={postdashboard}
+                alt="postdashboard"
+                onClick={() => handleImageClick("postdashboard")}
                 className="clickable"
               />
             </div>
@@ -62,6 +86,9 @@ function PageProject() {
       <SlidePanel isOpen={!!openPanel} onClose={closePanel}>
         {openPanel === "peakmotion" && <PeakmotionProject />}
         {openPanel === "movie" && <MovieProject />}
+        {openPanel === "news" && <NewsProject />}
+        {openPanel === "aivideogenerator" && <AiVideoGeneratorProject />}
+        {openPanel === "postdashboard" && <PostDashboardProject />}
       </SlidePanel>
     </>
   );
