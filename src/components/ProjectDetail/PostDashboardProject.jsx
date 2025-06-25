@@ -5,8 +5,7 @@ function PostDashboardProject() {
   return (
     <>
       <div className="project-summary">
-        <h4>Movie</h4>
-        <p>aivideogenerator</p>
+        <h4>PostDashboard</h4>
         <img
           src={postdashboard}
           alt="postdashboard website"
@@ -17,12 +16,12 @@ function PostDashboardProject() {
       <div className="project-about">
         <h4>About</h4>
         <p>
-          Movie is a full-stack website that provides a platform for users to
-          filter movies, and add, remove favorite movies or watch later. It
-          features a user-friendly interface with a responsive design, ensuring
-          a seamless experience across devices. The website is built using React
-          for the frontend and Node.js for the backend, with DynamoDB as the
-          database solution.
+          PostDashboard is a full-stack website that provides a platform for
+          users to filter movies, and add, remove favorite movies or watch
+          later. It features a user-friendly interface with a responsive design,
+          ensuring a seamless experience across devices. The website is built
+          using React for the frontend and Node.js for the backend, with
+          DynamoDB as the database solution.
           <br />
         </p>
       </div>

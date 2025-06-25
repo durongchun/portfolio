@@ -5,15 +5,14 @@ function NewsProject() {
   return (
     <>
       <div className="project-summary">
-        <h4>Movie</h4>
-        <p>aivideogenerator</p>
-        <img src={news} alt="aivideogenerator website" className="clickable" />
+        <h4>News</h4>
+        <img src={news} alt="news website" className="clickable" />
       </div>
 
       <div className="project-about">
         <h4>About</h4>
         <p>
-          Movie is a full-stack website that provides a platform for users to
+          News is a full-stack website that provides a platform for users to
           filter movies, and add, remove favorite movies or watch later. It
           features a user-friendly interface with a responsive design, ensuring
           a seamless experience across devices. The website is built using React
@@ -26,7 +25,7 @@ function NewsProject() {
         <h4>Technologies</h4>
         <ul>
           <li>JavaScript (ES6+)</li>
-          <li>CSS3</li>
+          <li>Sass & CSS3</li>
           <li>HTML5</li>
         </ul>
       </div>

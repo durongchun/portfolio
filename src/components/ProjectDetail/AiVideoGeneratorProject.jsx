@@ -6,7 +6,6 @@ function AiVideoGeneratorProject() {
     <>
       <div className="project-summary">
         <h4>Movie</h4>
-        <p>aivideogenerator</p>
         <img
           src={aivideogenerator}
           alt="aivideogenerator website"

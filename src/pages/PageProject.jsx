@@ -4,12 +4,14 @@ import movie from "../images/movie-small.gif";
 import aivideogenerator from "../images/aivideogenerator-small.gif";
 import postdashboard from "../images/postdashboard-small.gif";
 import news from "../images/news-small.gif";
+import openworld from "../images/openworld-small.gif";
 import SlidePanel from "../components/SlidePanel";
 import PeakmotionProject from "../components/ProjectDetail/PeakmotionProject";
 import MovieProject from "../components/ProjectDetail/MovieProject";
 import AiVideoGeneratorProject from "../components/ProjectDetail/AiVideoGeneratorProject";
 import PostDashboardProject from "../components/ProjectDetail/PostDashboardProject";
 import NewsProject from "../components/ProjectDetail/NewsProject";
+import OpenWorldProject from "../components/ProjectDetail/OpenWorldProject";
 
 function PageProject() {
   const [openPanel, setOpenPanel] = useState(null);
@@ -73,9 +75,9 @@ function PageProject() {
             </div>
             <div>
               <img
-                src={postdashboard}
-                alt="postdashboard"
-                onClick={() => handleImageClick("postdashboard")}
+                src={openworld}
+                alt="openworld"
+                onClick={() => handleImageClick("openworld")}
                 className="clickable"
               />
             </div>
@@ -89,6 +91,7 @@ function PageProject() {
         {openPanel === "news" && <NewsProject />}
         {openPanel === "aivideogenerator" && <AiVideoGeneratorProject />}
         {openPanel === "postdashboard" && <PostDashboardProject />}
+        {openPanel === "openworld" && <OpenWorldProject />}
       </SlidePanel>
     </>
   );
