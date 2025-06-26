@@ -5,19 +5,17 @@ function NewsProject() {
   return (
     <>
       <div className="project-summary">
-        <h4>News</h4>
+        <h4>Eddy News</h4>
         <img src={news} alt="news website" className="clickable" />
       </div>
 
       <div className="project-about">
         <h4>About</h4>
         <p>
-          News is a full-stack website that provides a platform for users to
-          filter movies, and add, remove favorite movies or watch later. It
-          features a user-friendly interface with a responsive design, ensuring
-          a seamless experience across devices. The website is built using React
-          for the frontend and Node.js for the backend, with DynamoDB as the
-          database solution.
+          Eddy News is a website that provides a platform for users to read eddy
+          news. It features a user-friendly interface with a responsive design,
+          ensuring a seamless experience across devices. The website is built
+          using Sass, CSS animation and Javascript.
           <br />
         </p>
       </div>

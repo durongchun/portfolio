@@ -12,12 +12,11 @@ function OpenWorldProject() {
       <div className="project-about">
         <h4>About</h4>
         <p>
-          OpenWorld is a full-stack website that provides a platform for users
-          to filter movies, and add, remove favorite movies or watch later. It
-          features a user-friendly interface with a responsive design, ensuring
-          a seamless experience across devices. The website is built using React
-          for the frontend and Node.js for the backend, with DynamoDB as the
-          database solution.
+          OpenWorld is a website that provides a platform for users to choose
+          the different travel locations in the world. It features a
+          user-friendly interface with a responsive design, ensuring a seamless
+          experience across devices. The website is built using Sass, CSS and
+          Javascript.
           <br />
         </p>
       </div>

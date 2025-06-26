@@ -5,7 +5,7 @@ function AiVideoGeneratorProject() {
   return (
     <>
       <div className="project-summary">
-        <h4>Movie</h4>
+        <h4>Ai Video Generator</h4>
         <img
           src={aivideogenerator}
           alt="aivideogenerator website"
@@ -16,12 +16,9 @@ function AiVideoGeneratorProject() {
       <div className="project-about">
         <h4>About</h4>
         <p>
-          Movie is a full-stack website that provides a platform for users to
-          filter movies, and add, remove favorite movies or watch later. It
-          features a user-friendly interface with a responsive design, ensuring
-          a seamless experience across devices. The website is built using React
-          for the frontend and Node.js for the backend, with DynamoDB as the
-          database solution.
+          Ai Video Generator is started developing with Vue 3 in Vite to filter
+          Video. It features a user-friendly interface with a responsive design,
+          ensuring a seamless experience across devices.
           <br />
         </p>
       </div>
