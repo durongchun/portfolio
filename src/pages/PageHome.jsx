@@ -1,9 +1,12 @@
-// Page Home
-
+import React, { useEffect } from "react";
 import CanvasBackground from "../components/CanvasBackground";
 import { Link } from "react-router-dom";
+import { appTitle } from "../globals/globalVariables";
 
 function PageHome() {
+  useEffect(() => {
+    document.title = `${appTitle} - Home`;
+  }, []);
   return (
     <>
       <main>

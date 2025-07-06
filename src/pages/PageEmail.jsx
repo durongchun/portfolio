@@ -4,7 +4,7 @@ import emailjs from "emailjs-com";
 
 function PageEmail() {
   useEffect(() => {
-    document.title = `${appTitle} - Page Not Found`;
+    document.title = `${appTitle} - Email`;
   }, []);
 
   const sendEmail = (e) => {

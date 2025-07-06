@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import peakmotion from "../images/peakmotion-small.gif";
 import movie from "../images/movie-small.gif";
 import aivideogenerator from "../images/aivideogenerator-small.gif";
@@ -12,8 +12,12 @@ import AiVideoGeneratorProject from "../components/ProjectDetail/AiVideoGenerato
 import PostDashboardProject from "../components/ProjectDetail/PostDashboardProject";
 import NewsProject from "../components/ProjectDetail/NewsProject";
 import OpenWorldProject from "../components/ProjectDetail/OpenWorldProject";
+import { appTitle } from "../globals/globalVariables";
 
 function PageProject() {
+  useEffect(() => {
+    document.title = `${appTitle} - Projects`;
+  }, []);
   const [openPanel, setOpenPanel] = useState(null);
   const projectLinks = {
     peakmotion: "https://github.com/durongchun/peakmotion",

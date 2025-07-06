@@ -1,6 +1,11 @@
+import React, { useEffect } from "react";
 import lucyphoto from "../images/photo.jpeg";
+import { appTitle } from "../globals/globalVariables";
 
 function PageResume() {
+  useEffect(() => {
+    document.title = `${appTitle} - Resume`;
+  }, []);
   const handleDownload = () => {
     // Using the public URL
     const fileUrl = `${import.meta.env.PUBLIC_URL || ""}/Lucy_Resume.pdf`;
