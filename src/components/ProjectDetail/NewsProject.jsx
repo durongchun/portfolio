@@ -33,8 +33,8 @@ function NewsProject() {
       </div>
       <div className="project-links">
         <h4>Github</h4>
-        <a href="https://github.com/durongchun/movie">
-          https://github.com/durongchun/movie
+        <a href="https://github.com/durongchun/news">
+          https://github.com/durongchun/news
         </a>
       </div>
     </>
