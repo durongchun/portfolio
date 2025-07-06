@@ -34,8 +34,8 @@ function OpenWorldProject() {
       </div>
       <div className="project-links">
         <h4>Github</h4>
-        <a href="https://github.com/durongchun/movie">
-          https://github.com/durongchun/movie
+        <a href="https://github.com/durongchun/openworld">
+          https://github.com/durongchun/openworld
         </a>
       </div>
     </>

@@ -15,6 +15,14 @@ import OpenWorldProject from "../components/ProjectDetail/OpenWorldProject";
 
 function PageProject() {
   const [openPanel, setOpenPanel] = useState(null);
+  const projectLinks = {
+    peakmotion: "https://github.com/durongchun/peakmotion",
+    movie: "https://github.com/durongchun/movie",
+    news: "https://github.com/durongchun/news",
+    aivideogenerator: "https://github.com/durongchun/vue-aivideogenerator",
+    postdashboard: "https://github.com/durongchun/angular-postsdashboard",
+    openworld: "https://github.com/durongchun/openworld",
+  };
 
   const handleImageClick = (panelName) => {
     setOpenPanel(panelName);
@@ -85,7 +93,11 @@ function PageProject() {
         </div>
       </main>
 
-      <SlidePanel isOpen={!!openPanel} onClose={closePanel}>
+      <SlidePanel
+        isOpen={!!openPanel}
+        onClose={closePanel}
+        projectLink={projectLinks[openPanel]}
+      >
         {openPanel === "peakmotion" && <PeakmotionProject />}
         {openPanel === "movie" && <MovieProject />}
         {openPanel === "news" && <NewsProject />}
