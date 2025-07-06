@@ -96,6 +96,13 @@ main {
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
+    .photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px solid s.$light;
+      margin-bottom: 1rem;
+    }
 
     a {
       color: s.$yellow;

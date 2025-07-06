@@ -1,4 +1,4 @@
-// Page Not Found
+import lucyphoto from "../images/photo.jpeg";
 
 function PageResume() {
   const handleDownload = () => {
@@ -18,6 +18,7 @@ function PageResume() {
     <main>
       <div className="resume">
         <div>
+          <img src={lucyphoto} alt="Lucy-photo" className="photo" />
           <h1>Full Stack Developer</h1>
           <p>
             I’m Lucy, a Full Stack Web Developer with expertise in the MERN
