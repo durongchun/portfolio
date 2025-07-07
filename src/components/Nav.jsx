@@ -7,13 +7,28 @@ const Nav = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const activeLink = navRef.current.querySelector(".nav-link.active");
-    if (activeLink && highlightRef.current) {
+    const highlight = highlightRef.current;
+    const { pathname } = location;
+
+    // Hide the highlight on /resume and /email
+    if (pathname === "/resume" || pathname === "/email") {
+      if (highlight) {
+        highlight.style.opacity = "0";
+        highlight.style.width = "0";
+      }
+      return;
+    }
+
+    // Show and move the highlight on other routes
+    const activeLink = navRef.current?.querySelector(".nav-link.active");
+    if (activeLink && highlight) {
       const { offsetLeft, offsetWidth } = activeLink;
-      highlightRef.current.style.left = `${offsetLeft}px`;
-      highlightRef.current.style.width = `${offsetWidth}px`;
+      highlight.style.left = `${offsetLeft}px`;
+      highlight.style.width = `${offsetWidth}px`;
+      highlight.style.opacity = "1";
     }
   }, [location]);
+
   return (
     <nav className="nav">
       <div className="nav-left" ref={navRef}>
@@ -46,10 +61,24 @@ const Nav = () => {
 
       <div className="nav-right">
         <div className="nav-right__resume">
-          <NavLink to="/resume">RESUME</NavLink>
+          <NavLink
+            to="/resume"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            RESUME
+          </NavLink>
         </div>
         <div className="nav-right__email">
-          <NavLink to="/email">Email</NavLink>
+          <NavLink
+            to="/email"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Email
+          </NavLink>
         </div>
       </div>
     </nav>

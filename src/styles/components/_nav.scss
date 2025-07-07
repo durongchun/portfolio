@@ -30,29 +30,49 @@
       background-color: s.$light;
       border-radius: 70px;
       padding: 1rem 1.5rem;
+      .nav-link.active {
+        background-color: s.$yellow;
+        border-radius: 30px; // optional styling
+        transition: all 0.8s ease;
+      }
     }
-    .nav-right__resume:hover {
-      background-color: s.$yellow;
-    }
-    .nav-right__resume:active {
-      background-color: s.$grey;
-    }
+
     .nav-right__email {
-      background-color: s.$light;
       position: relative;
-      border-radius: 100%;
-      padding: 0.75rem;
-      height: 3rem;
-      width: 3rem;
+      height: 3.5rem;
+      width: 3.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    .nav-right__email:hover {
-      background-color: s.$yellow;
-    }
-    .nav-right__email:active {
-      background-color: s.$grey;
+      border-radius: 50%;
+      background-color: s.$light;
+      overflow: visible; // allow larger background to overflow
+
+      .nav-link {
+        position: relative;
+        z-index: 1; // keep link content on top
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        color: s.$dark;
+
+        &.active::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          width: 80%; // make it bigger
+          height: 80%;
+          background-color: s.$yellow;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 1s ease;
+        }
+      }
     }
   }
 }
