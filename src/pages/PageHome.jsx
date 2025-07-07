@@ -11,8 +11,8 @@ function PageHome() {
     <>
       <main>
         <div className="name">
-          <p>Lucy Du</p>
-          <p>Software Developer</p>
+          <h2>Lucy Du</h2>
+          <h2>Software Developer</h2>
           <div className="introduction">
             <p>
               I am a full stack developer with a passion for building

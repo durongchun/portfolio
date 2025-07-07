@@ -15,7 +15,7 @@ import CustomCursor from "../components/CustomCursor";
 
 function AppRouter() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio">
       <div className="wrapper">
         <CustomCursor />
         <Nav />
