@@ -2,7 +2,7 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "../components/Header";
-import Nav from "../components/Nav";
+import ResponsiveNav from "../components/ResponsiveNav";
 import Footer from "../components/Footer";
 import PageHome from "../pages/PageHome";
 import PageProject from "../pages/PageProject";
@@ -18,7 +18,7 @@ function AppRouter() {
     <BrowserRouter basename="/portfolio">
       <div className="wrapper">
         <CustomCursor />
-        <Nav />
+        <ResponsiveNav />
         <Routes>
           <Route path="/" exact element={<PageHome />} />
           <Route path="/projects" element={<PageProject />} />
