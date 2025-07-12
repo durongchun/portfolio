@@ -97,10 +97,12 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
+    gap: 2rem;
     margin-top: 2rem;
     color: s.$light;
     font-size: smaller;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .timeline.about {
     display: flex;
@@ -296,9 +298,12 @@ main {
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      gap: 3rem;
       margin-top: 4rem;
       color: s.$light;
       font-size: smaller;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
   }
 }
