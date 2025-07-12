@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   right: -100%; /* Start hidden off the right edge */
-  width: 600px;
+  width: 80%;
   height: 100vh;
   background: s.$dark;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
@@ -137,4 +137,11 @@ li {
   font-family: "Blorado, sans-serif";
   font-size: 14px;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1024px) {
+  .slide-panel {
+    width: 600px;
+  }
 }
