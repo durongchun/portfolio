@@ -97,8 +97,8 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    margin-top: 5rem;
+
+    margin-top: 2rem;
     color: s.$light;
     font-size: smaller;
   }
@@ -290,6 +290,15 @@ main {
           background-color: darken(s.$yellow, 20%);
         }
       }
+    }
+    .projects {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+      color: s.$light;
+      font-size: smaller;
     }
   }
 }

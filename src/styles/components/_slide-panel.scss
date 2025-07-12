@@ -90,6 +90,8 @@
   cursor: pointer;
   transition: transform 0.2s ease;
   border-radius: 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .clickable:hover {
@@ -139,6 +141,13 @@ li {
   text-decoration: none;
 }
 @media screen and (min-width: 768px) {
+  .clickable {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border-radius: 5px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .slide-panel {
