@@ -7,10 +7,11 @@ main {
     color: whitesmoke;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 1rem;
     p {
       font-size: 0.95rem;
     }
@@ -37,17 +38,17 @@ main {
   }
 
   .intro__text {
-    font-size: 1.5em;
-    font-weight: 500;
-    margin: 2rem 0rem 1.5rem;
+    font-size: 1.1em;
+    font-weight: 400;
     position: relative;
     text-transform: uppercase;
-    letter-spacing: 3.5px;
+    letter-spacing: 1.5px;
+    align-items: center;
   }
 
   .mark {
     position: relative;
-    padding: 0 10px;
+
     background: none;
     color: #eeeded;
     font-weight: bold;
@@ -115,11 +116,11 @@ main {
   .contact {
     display: flex;
     flex-direction: column;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 3rem;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
     .form-control {
       display: block;
@@ -139,7 +140,7 @@ main {
     input,
     textarea,
     button {
-      width: 500px;
+      width: 100%;
       margin-top: 1rem;
     }
     textarea {
@@ -166,8 +167,8 @@ main {
   .resume {
     display: flex;
     flex-direction: column;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 1rem;
+    margin-right: 1rem;
     margin-top: 3rem;
     justify-content: center;
     align-items: flex-start;
@@ -178,6 +179,8 @@ main {
       border-radius: 50%;
       border: 2px solid s.$light;
       margin-bottom: 1rem;
+      margin-left: 22%;
+      margin-right: 20%;
     }
 
     a {
@@ -243,6 +246,297 @@ main {
 
     &:hover svg {
       transform: translateX(4px);
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  main {
+    .resume {
+      display: flex;
+      flex-direction: column;
+      margin-left: 30%;
+      margin-right: 30%;
+      margin-top: 3rem;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      .photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid s.$light;
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: s.$yellow;
+        text-decoration: none;
+        font-size: 1.2rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .download-button {
+        background-color: s.$yellow;
+        color: s.$dark;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken(s.$yellow, 20%);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    padding: s.$section-padding;
+    .name {
+      color: whitesmoke;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 200px;
+      margin-right: 200px;
+      p {
+        font-size: 0.95rem;
+      }
+    }
+    .name > h2,
+    .see-more-link {
+      display: inline-block;
+      // background: linear-gradient(to right, #efefeb, #10100f);
+
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      animation: flash 0.3s ease-in-out infinite;
+    }
+    @keyframes flash {
+      0%,
+      100% {
+        opacity: 1;
+        filter: brightness(1);
+      }
+      50% {
+        opacity: 0.7;
+        filter: brightness(1.5); // add glow effect
+      }
+    }
+
+    .intro__text {
+      font-size: 1.5em;
+      font-weight: 500;
+      margin: 2rem 0rem 1.5rem;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 3.5px;
+    }
+
+    .mark {
+      position: relative;
+      padding: 0 10px;
+      background: none;
+      color: #eeeded;
+      font-weight: bold;
+    }
+
+    .mark::before,
+    .mark::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 15px;
+      background: hsla(0 88.24% 66.67% / 0.22);
+      animation: smoothFlash 3s infinite cubic-bezier(0.66, 0, 0.34, 1);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .mark::before {
+      top: 15px;
+      animation-delay: 0s;
+    }
+
+    .mark::after {
+      bottom: 15px;
+      animation-delay: 0.1s; /* Half of 3s */
+    }
+
+    @keyframes smoothFlash {
+      0% {
+        opacity: 1;
+        filter: drop-shadow(0 0 4px rgba(255, 0, 0, 0.4));
+      }
+      50% {
+        opacity: 0;
+        filter: none;
+      }
+      100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 4px rgba(255, 0, 0, 0.4));
+      }
+    }
+
+    .projects {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 5rem;
+      color: s.$light;
+      font-size: smaller;
+    }
+    .timeline.about {
+      display: flex;
+      flex-direction: column;
+      margin-left: 21%;
+      margin-right: 21%;
+      margin-top: 3rem;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      margin-left: 30%;
+      margin-right: 30%;
+      margin-top: 3rem;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      .form-control {
+        display: block;
+        width: 100%;
+        height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #171616;
+        background-clip: padding-box;
+        border: 1px solid #060606;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      input,
+      textarea,
+      button {
+        width: 500px;
+        margin-top: 1rem;
+      }
+      textarea {
+        min-height: 200px;
+      }
+      button {
+        background-color: s.$yellow;
+        color: s.$dark;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken(s.$yellow, 20%);
+        }
+      }
+      .email {
+        color: s.$light;
+      }
+    }
+
+    .resume {
+      display: flex;
+      flex-direction: column;
+      margin-left: 30%;
+      margin-right: 30%;
+      margin-top: 3rem;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      .photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid s.$light;
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: s.$yellow;
+        text-decoration: none;
+        font-size: 1.2rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .download-button {
+        background-color: s.$yellow;
+        color: s.$dark;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken(s.$yellow, 20%);
+        }
+      }
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: 2rem;
+      padding-left: 2rem;
+      border-left: 3px solid #facc15; // yellow
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -1.4rem;
+      top: 0.3rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: #facc15; // yellow
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    .see-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      color: s.$light; // Tailwind blue-600
+      text-decoration: none;
+      font-weight: 500;
+
+      svg {
+        transition: transform 0.2s ease;
+      }
+
+      &:hover svg {
+        transform: translateX(4px);
+      }
     }
   }
 }
